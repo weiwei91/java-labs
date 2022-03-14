@@ -6,12 +6,21 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="java-base" />
-        <module name="spring-base" />
         <module name="spring-cloud-discovery-nacos-provider" />
-        <module name="springboot-base" />
         <module name="spring-cloud-discovery-nacos-consumer" />
+        <module name="java-base" />
+        <module name="http-client-selection" />
+        <module name="spring-base" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="http-client" target="8" />
+      <module name="http-client-compare" target="1.7" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="http-client-selection" options="" />
+    </option>
   </component>
 </project>

@@ -12,9 +12,6 @@
 
     <artifactId>spring-cloud-base</artifactId>
 
-
-
-
     <modules>
         <module>spring-cloud-discovery-nacos-consumer</module>
         <module>spring-cloud-discovery-nacos-provider</module>
