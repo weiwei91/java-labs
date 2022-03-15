@@ -1,4 +1,5 @@
 ﻿# 项目排除路径
+.idea
 /java-base/target/
 /spring-cloud-base/spring-cloud-discovery-nacos-consumer/target/
 /spring-cloud-base/spring-cloud-discovery-nacos-provider/target/
