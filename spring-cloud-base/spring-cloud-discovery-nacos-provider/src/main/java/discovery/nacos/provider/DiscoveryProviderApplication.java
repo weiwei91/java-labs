@@ -4,6 +4,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @SpringBootApplication
@@ -19,7 +20,12 @@ public class DiscoveryProviderApplication {
 
         @GetMapping("/echo")
         public String echo(String name) {
-            return "provider:" + name;
+            return "echo:provider:" + name;
+        }
+
+        @PostMapping("/postEcho")
+        public String postEcho(String name) {
+            return "postEcho:provider:" + name;
         }
 
     }
