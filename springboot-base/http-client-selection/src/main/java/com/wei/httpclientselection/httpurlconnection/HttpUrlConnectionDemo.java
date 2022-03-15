@@ -1,4 +1,4 @@
-package com.wei.httpclientselection;
+package com.wei.httpclientselection.httpurlconnection;
 
 import java.io.*;
 import java.net.HttpURLConnection;
