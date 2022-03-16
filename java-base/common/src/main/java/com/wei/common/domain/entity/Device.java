@@ -27,7 +27,7 @@ public class Device {
      *     UUID(4),//全球唯一id
      *     ID_WORKER_STR(5);//ID_WORKER字符串表示
      * **/
-    @TableId(type= IdType.UUID)
+    @TableId(type= IdType.ASSIGN_UUID)
     @TableField("index_code")
     private String indexCode;
     private String ip;
@@ -40,6 +40,7 @@ public class Device {
     @TableField(value = "update_time",fill = FieldFill.UPDATE,jdbcType = TIMESTAMP)
     private Date updateTime;
     //乐观锁版本号
-    private String version;
+    @Version
+    private Integer version;
 
 }
