@@ -41,6 +41,7 @@ public class Device {
     private Date updateTime;
     //乐观锁版本号
     @Version
+    @TableField(fill = FieldFill.INSERT)
     private Integer version;
 
 }
