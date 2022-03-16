@@ -1,4 +1,4 @@
-package com.wei.common.domain.entity;
+package com.wei.common.model.entity;
 
 import com.baomidou.mybatisplus.annotation.*;
 import lombok.AllArgsConstructor;
