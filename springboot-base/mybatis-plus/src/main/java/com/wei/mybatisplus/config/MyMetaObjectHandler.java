@@ -12,14 +12,14 @@ import java.util.Date;
 public class MyMetaObjectHandler implements MetaObjectHandler {
     @Override
     public void insertFill(MetaObject metaObject) {
-        log.info("start insert fill......");
+        //log.info("start insert fill......");
         this.setFieldValByName("createTime",new Date(),metaObject);
         this.setFieldValByName("version",0,metaObject);
     }
 
     @Override
     public void updateFill(MetaObject metaObject) {
-        log.info("start update fill......");
+        //log.info("start update fill......");
         this.setFieldValByName("updateTime",new Date(),metaObject);
     }
 }
