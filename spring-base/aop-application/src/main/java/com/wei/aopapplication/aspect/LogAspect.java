@@ -6,10 +6,7 @@ import com.wei.aopapplication.util.RequestContext;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
 import org.aspectj.lang.Signature;
-import org.aspectj.lang.annotation.Around;
-import org.aspectj.lang.annotation.Aspect;
-import org.aspectj.lang.annotation.Before;
-import org.aspectj.lang.annotation.Pointcut;
+import org.aspectj.lang.annotation.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Component;
@@ -20,9 +17,19 @@ import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
 
+/***
+ *
+ * createTime : 2022/3/16 11:51
+ * author     : 魏伟
+ * describe   : aop 应用代码
+ *
+ ***/
+
+
 @Aspect
 @Component
 public class LogAspect {
+
 
     private final static Logger LOG = LoggerFactory.getLogger(LogAspect.class);
 
@@ -30,11 +37,8 @@ public class LogAspect {
     @Pointcut("execution(public * com.wei.*.controller..*Controller.*(..))")
     public void controllerPointcut() {}
 
-
     @Before("controllerPointcut()")
     public void doBefore(JoinPoint joinPoint) throws Throwable {
-
-
 
         // 开始打印请求日志
         ServletRequestAttributes attributes = (ServletRequestAttributes) RequestContextHolder.getRequestAttributes();
@@ -83,6 +87,11 @@ public class LogAspect {
         LOG.info("返回结果: {}", JSONObject.toJSONString(result, excludefilter));
         LOG.info("------------- 结束 耗时：{} ms -------------", System.currentTimeMillis() - startTime);
         return result;
+    }
+
+    @AfterReturning(value = "controllerPointcut()",returning="retValue")
+    public void AfterReturning(JoinPoint jp, Object retValue) throws Throwable {
+        LOG.info("AfterReturning: {},返回值{}", jp.getSignature().getName(),retValue);
     }
 
     /**
