@@ -1,15 +1,21 @@
 package com.wei.common.domain.entity;
 
-import com.baomidou.mybatisplus.annotation.IdType;
-import com.baomidou.mybatisplus.annotation.TableId;
-import com.baomidou.mybatisplus.annotation.TableName;
+import com.baomidou.mybatisplus.annotation.*;
+import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 import java.util.Date;
+
+import static org.apache.ibatis.type.JdbcType.TIMESTAMP;
+import static org.apache.ibatis.type.JdbcType.VARCHAR;
+
 @Data
 @TableName(value = "device")
 @Builder
+@AllArgsConstructor
+@NoArgsConstructor
 public class Device {
     //设备相关
     /***
@@ -22,12 +28,17 @@ public class Device {
      *     ID_WORKER_STR(5);//ID_WORKER字符串表示
      * **/
     @TableId(type= IdType.UUID)
+    @TableField("index_code")
     private String indexCode;
     private String ip;
     private String port;
-    private String name;
+    @TableField(value = "device_name",jdbcType = VARCHAR )
+    private String deviceName;
     private String capability;
+    @TableField(value = "create_time",fill = FieldFill.INSERT,jdbcType = TIMESTAMP)
     private Date createTime;
+    @TableField(value = "update_time",fill = FieldFill.UPDATE,jdbcType = TIMESTAMP)
+    private Date updateTime;
     //乐观锁版本号
     private String version;
 
