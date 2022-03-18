@@ -1,4 +1,4 @@
-package com.wei.monitorsqldruid.config;
+package com.wei.mybatisplus.config;
 
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;

@@ -1,7 +1,7 @@
-package com.wei.monitorsqldruid.task;
+package com.wei.mybatisplus.task;
 
 import com.wei.common.model.entity.Device;
-import com.wei.monitorsqldruid.service.DeviceService;
+import com.wei.mybatisplus.service.DeviceService;
 
 import java.util.List;
 import java.util.concurrent.CountDownLatch;
