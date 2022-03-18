@@ -14,6 +14,8 @@
 
     <modules>
         <module>http-client-selection</module>
+        <module>mybatis-plus</module>
+        <module>monitor-sql-druid</module>
     </modules>
 
 </project>

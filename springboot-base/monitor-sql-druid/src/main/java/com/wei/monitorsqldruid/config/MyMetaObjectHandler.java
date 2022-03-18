@@ -1,4 +1,4 @@
-package com.wei.mybatisplus.config;
+package com.wei.monitorsqldruid.config;
 
 import com.baomidou.mybatisplus.core.handlers.MetaObjectHandler;
 import lombok.extern.slf4j.Slf4j;

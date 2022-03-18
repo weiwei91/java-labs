@@ -1,4 +1,4 @@
-package com.wei.mybatisplus.service;
+package com.wei.monitorsqldruid.service;
 
 import com.baomidou.mybatisplus.extension.service.IService;
 import com.wei.common.model.entity.Device;
