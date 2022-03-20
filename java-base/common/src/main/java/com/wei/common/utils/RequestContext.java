@@ -1,4 +1,4 @@
-package com.wei.aopapplication.util;
+package com.wei.common.utils;
 
 
 import java.io.Serializable;

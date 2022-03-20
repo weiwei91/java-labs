@@ -34,6 +34,10 @@ public class Response<T> implements Serializable {
      */
     private T data;
 
+    public boolean isSuccess(){
+        return this.code.equals(CODE_SUCCESS) ? true: false;
+    }
+
 
     public Response(String code, String msg, T data) {
         this.code = code;

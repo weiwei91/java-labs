@@ -1,7 +1,11 @@
 package com.wei.mybatisplus;
 
 import com.wei.common.model.entity.Device;
+import com.wei.common.model.entity.Place;
+import com.wei.common.model.entity.Region;
 import com.wei.mybatisplus.mapper.DeviceMapper;
+import com.wei.mybatisplus.mapper.PlaceMapper;
+import com.wei.mybatisplus.mapper.RegionMapper;
 import com.wei.mybatisplus.service.DeviceService;
 import com.wei.mybatisplus.task.BatchSaveTask;
 import lombok.extern.slf4j.Slf4j;
@@ -24,6 +28,11 @@ class MybatisPlusApplicationTests {
     DeviceMapper deviceMapper;
     @Autowired
     DeviceService deviceService;
+    @Resource
+    RegionMapper regionMapper;
+    @Resource
+    PlaceMapper placeMapper;
+
 
     @Test
     void contextLoads() {
@@ -32,14 +41,32 @@ class MybatisPlusApplicationTests {
     }
 
     @Test
+    void addRegion(){
+        Region region1 =Region.builder()
+                .regionName("余杭")
+                .indexCode("yuhang")
+                .build();
+        regionMapper.insert(region1);
+    }
+
+    @Test
+    void addPlace(){
+        Place region1 =Place.builder()
+                .placeName("富阳区")
+                .indexCode("200")
+                .build();
+        placeMapper.insert(region1);
+    }
+
+    @Test
     void addDevice() {
         Device device = Device.builder()
-                .deviceName("超脑设备2号")
+                .deviceName("超脑设备1号")
                 .ip("10.16.20.23")
                 .port("5202")
                 .capability("pir")
-                //.indexCode("123")
-                //.createTime(new Date())
+                .regionCode("hangzhou")
+                .placeCode("200")
                 .version(1)
                 .build();
         deviceMapper.insert(device);
@@ -116,6 +143,9 @@ class MybatisPlusApplicationTests {
         }
         return list;
     }
+
+
+
 
 
 }

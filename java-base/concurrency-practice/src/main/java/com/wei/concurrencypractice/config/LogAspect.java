@@ -1,4 +1,4 @@
-package com.wei.aopapplication.aspect;
+package com.wei.concurrencypractice.config;
 
 import com.alibaba.fastjson.JSONObject;
 import com.alibaba.fastjson.support.spring.PropertyPreFilters;
@@ -13,6 +13,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.context.request.RequestContextHolder;
 import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.multipart.MultipartFile;
+
 import javax.servlet.ServletRequest;
 import javax.servlet.ServletResponse;
 import javax.servlet.http.HttpServletRequest;
@@ -89,10 +90,10 @@ public class LogAspect {
         return result;
     }
 
-    @AfterReturning(value = "controllerPointcut()",returning="retValue")
-    public void AfterReturning(JoinPoint jp, Object retValue) throws Throwable {
-        LOG.info("AfterReturning: {},返回值{}", jp.getSignature().getName(),retValue);
-    }
+//    @AfterReturning(value = "controllerPointcut()",returning="retValue")
+//    public void AfterReturning(JoinPoint jp, Object retValue) throws Throwable {
+//        LOG.info("AfterReturning: {},返回值{}", jp.getSignature().getName(),retValue);
+//    }
 
     /**
      * 使用nginx做反向代理，需要用该方法才能取到真实的远程IP

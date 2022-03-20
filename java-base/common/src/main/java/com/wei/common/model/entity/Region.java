@@ -11,13 +11,18 @@ import java.util.Date;
 import static org.apache.ibatis.type.JdbcType.TIMESTAMP;
 import static org.apache.ibatis.type.JdbcType.VARCHAR;
 
+/**
+ * @Description:
+ * @Auther: weiwei
+ * @Date: 2022/03/19/11:00
+ */
 @Data
-@TableName(value = "device")
+@TableName(value = "region")
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class Device {
-    //设备相关
+public class Region {
+    //区域相关
     /***
      *     设置id生成策略
      *     AUTO(0),//自增
@@ -29,16 +34,9 @@ public class Device {
      * **/
     @TableId(type= IdType.ASSIGN_UUID)
     private String indexCode;
-    private String ip;
-    private String port;
-    @TableField(value = "device_name",jdbcType = VARCHAR )
-    private String deviceName;
+    @TableField(value = "region_name",jdbcType = VARCHAR )
+    private String regionName;
 
-    private String placeCode;
-    private String regionCode;
-
-
-    private String capability;
     @TableField(value = "create_time",fill = FieldFill.INSERT,jdbcType = TIMESTAMP)
     private Date createTime;
     @TableField(value = "update_time",fill = FieldFill.UPDATE,jdbcType = TIMESTAMP)

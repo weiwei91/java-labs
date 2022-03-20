@@ -1,10 +1,15 @@
 spring:
+  application:
+    name: mybatisplus-provider # Spring 应用名
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848 # Nacos 服务器地址
   datasource:
     url: jdbc:mysql://localhost:3306/records?useSSL=false&useUnicode=true&characterEncoding=UTF-8
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
     password: Abc123++
-    platform: mysql                               # 数据库类型
     type: com.alibaba.druid.pool.DruidDataSource  # 指定数据源类型
     ########## 连接池 配置 ##########
     druid:
@@ -93,3 +98,6 @@ logging:
           mapper: debug
 server:
   port: 89
+
+
+
