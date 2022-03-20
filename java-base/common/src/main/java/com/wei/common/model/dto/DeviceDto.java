@@ -11,7 +11,6 @@ import java.util.Date;
  */
 @Data
 public class DeviceDto {
-
     private String ip;
     private String deviceName;
     private String placeName;

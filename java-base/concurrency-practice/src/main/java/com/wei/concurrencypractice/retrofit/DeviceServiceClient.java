@@ -14,7 +14,7 @@ import retrofit2.http.Query;
  * @Date: 2022/03/19/16:03
  */
 @RetrofitClient(baseUrl = "http://127.0.0.1:89")
-public interface DeviceServiceClient {
+public interface DeviceServiceClient{
     @GET("device/getDeviceById")
     Response<Device> getDeviceById(@Query("id") String id);
 
