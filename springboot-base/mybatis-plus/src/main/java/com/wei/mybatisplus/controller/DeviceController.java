@@ -21,4 +21,10 @@ public class DeviceController {
         //000002cfeccb6511c8f0785ab9c49d6b
         return Response.success(deviceService.getById(id));
     }
+    @GetMapping("/getString")
+    public String getString(String id) {
+        //000002cfeccb6511c8f0785ab9c49d6b
+        return "weiwei";
+    }
+
 }
