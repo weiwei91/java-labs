@@ -17,8 +17,8 @@ public class DeviceController {
 
     @GetMapping("/getDeviceById")
     @ResponseBody
-    public Response getDeviceById(String id) {
-        //000002cfeccb6511c8f0785ab9c49d6b
+    public Response getDeviceById(String id) throws InterruptedException {
+        Thread.sleep(100);
         return Response.success(deviceService.getById(id));
     }
     @GetMapping("/getString")

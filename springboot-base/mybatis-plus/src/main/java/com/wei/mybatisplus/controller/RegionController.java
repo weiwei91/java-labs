@@ -20,8 +20,9 @@ public class RegionController {
 
     @GetMapping("/getRegionById")
     @ResponseBody
-    public Response getRegionById(String id) {
+    public Response getRegionById(String id) throws InterruptedException {
         //000002cfeccb6511c8f0785ab9c49d6b
+        Thread.sleep(100);
         return Response.success(regionMapper.selectById(id));
     }
 }

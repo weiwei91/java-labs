@@ -17,8 +17,9 @@ public class PlaceController {
 
     @GetMapping("/getPlaceById")
     @ResponseBody
-    public Response getPlaceById(String id) {
+    public Response getPlaceById(String id) throws InterruptedException {
         //000002cfeccb6511c8f0785ab9c49d6b
+        Thread.sleep(100);
         return Response.success(placeMapper.selectById(id));
     }
 }
