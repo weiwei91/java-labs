@@ -2,6 +2,7 @@ package com.wei.feign.config;
 import com.wei.feign.client.DeviceServiceClient01;
 import com.wei.feign.client.DeviceServiceClient02;
 import feign.Feign;
+import feign.Logger;
 import feign.gson.GsonDecoder;
 import feign.gson.GsonEncoder;
 import feign.spring.SpringContract;
@@ -10,6 +11,11 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class FeignConfig {
+    //设置feign日志级别
+    @Bean
+    Logger.Level feignLoggerLevel(){
+        return Logger.Level.BASIC;
+    }
 
     @Bean
     public DeviceServiceClient01 userServiceFeignClient01() {
