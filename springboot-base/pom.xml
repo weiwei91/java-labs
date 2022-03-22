@@ -16,6 +16,7 @@
         <module>http-client-selection</module>
         <module>mybatis-plus</module>
         <module>feign</module>
+        <module>redis-redisson</module>
     </modules>
 
 </project>
