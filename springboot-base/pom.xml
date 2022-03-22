@@ -15,6 +15,7 @@
     <modules>
         <module>http-client-selection</module>
         <module>mybatis-plus</module>
+        <module>redis-redisson</module>
     </modules>
 
 </project>
