@@ -1,5 +1,6 @@
 package discover.nacos.consumer;
 
+import discover.nacos.consumer.client.DemoProviderFeignClient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,16 +8,19 @@ import org.springframework.cloud.client.ServiceInstance;
 import org.springframework.cloud.client.discovery.DiscoveryClient;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalancerClient;
+import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 @SpringBootApplication
 @EnableDiscoveryClient
+@EnableFeignClients
 public class DiscoveryConsumerApplication {
 
     public static void main(String[] args) {
@@ -33,8 +37,10 @@ public class DiscoveryConsumerApplication {
 
     }
 
+
     @RestController
     static class TestController {
+
 
         @Autowired
         private DiscoveryClient discoveryClient;
@@ -42,6 +48,7 @@ public class DiscoveryConsumerApplication {
         private RestTemplate restTemplate;
         @Autowired
         private LoadBalancerClient loadBalancerClient;
+
 
         @GetMapping("/mockcomsumer")
         public String hello(String name) {
