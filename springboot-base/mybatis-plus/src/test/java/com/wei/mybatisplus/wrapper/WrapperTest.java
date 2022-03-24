@@ -1,6 +1,7 @@
 package com.wei.mybatisplus.wrapper;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
+import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
 import com.wei.common.model.entity.Device;
 import com.wei.mybatisplus.mapper.DeviceMapper;
 import com.wei.mybatisplus.service.DeviceService;
@@ -39,4 +40,19 @@ public class WrapperTest {
         log.info("1");
 
     }
+
+    @Test
+    public void testPage() {
+        QueryWrapper<Device> queryWrapper =new QueryWrapper<>();
+
+        queryWrapper.select("*").like("device_name","超脑");
+
+        Page page =new Page<>(2,10);
+        Page<Device> deviceList = deviceMapper.selectPage(page,queryWrapper);
+
+        log.info("1");
+
+    }
+
+
 }

@@ -1,10 +1,8 @@
 package com.wei.mybatisplus.config;
 
+import com.baomidou.mybatisplus.annotation.DbType;
 import com.baomidou.mybatisplus.extension.plugins.MybatisPlusInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.inner.BlockAttackInnerInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.inner.DynamicTableNameInnerInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.inner.IllegalSQLInnerInterceptor;
-import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;
+import com.baomidou.mybatisplus.extension.plugins.inner.*;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -29,6 +27,9 @@ public class MybatisPlusConfig {
         mybatisPlusInterceptor.addInnerInterceptor(new IllegalSQLInnerInterceptor());
         //新增防止全表更新与删除插件
         mybatisPlusInterceptor.addInnerInterceptor(new BlockAttackInnerInterceptor());
+        //新增分页插件
+        mybatisPlusInterceptor.addInnerInterceptor(new PaginationInnerInterceptor(DbType.MYSQL));
+
         //动态表明插件
         DynamicTableNameInnerInterceptor dynamicTableNameInnerInterceptor = new DynamicTableNameInnerInterceptor();
         /**
