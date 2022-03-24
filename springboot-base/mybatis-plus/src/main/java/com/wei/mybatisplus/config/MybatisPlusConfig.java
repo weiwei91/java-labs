@@ -5,7 +5,6 @@ import com.baomidou.mybatisplus.extension.plugins.inner.BlockAttackInnerIntercep
 import com.baomidou.mybatisplus.extension.plugins.inner.DynamicTableNameInnerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.IllegalSQLInnerInterceptor;
 import com.baomidou.mybatisplus.extension.plugins.inner.OptimisticLockerInnerInterceptor;
-import com.wei.mybatisplus.util.RequestDataHelper;
 import org.mybatis.spring.annotation.MapperScan;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -36,15 +35,17 @@ public class MybatisPlusConfig {
          * 通过动态表明插件可以实现分表
          * 规则可以自己定义
          * 但是获取参数的方式需要自己写,可以做到读写分离
-         * **/
+         * 怎样获取到值呢？加入可以获取到id值可以根据一定的规则实现分表
+         *
+         **/
 
         dynamicTableNameInnerInterceptor.setTableNameHandler((sql, tableName) -> {
             // 获取参数方法
-            Map<String, Object> paramMap = RequestDataHelper.getRequestData();
+
             String sqlString = sql;
             String year = "_2022";
 
-            return tableName + year;
+            return tableName;
         });
         mybatisPlusInterceptor.addInnerInterceptor(dynamicTableNameInnerInterceptor);
 
