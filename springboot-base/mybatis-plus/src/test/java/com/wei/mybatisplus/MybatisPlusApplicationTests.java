@@ -60,16 +60,20 @@ class MybatisPlusApplicationTests {
 
     @Test
     void addDevice() {
-        Device device = Device.builder()
-                .deviceName("超脑设备1号")
-                .ip("10.16.20.23")
-                .port("5202")
-                .capability("pir")
-                .regionCode("hangzhou")
-                .placeCode("200")
-                .version(1)
-                .build();
-        deviceMapper.insert(device);
+
+        for (int i = 0; i < 100; i++) {
+            Device device = Device.builder()
+                    .deviceName("超脑设备"+i+"号")
+                    .ip("10.16.20.23")
+                    .port("5202")
+                    .capability("pir")
+                    .regionCode("hangzhou")
+                    .placeCode("200")
+                    .version(1)
+                    .build();
+            deviceMapper.insert(device);
+        }
+
     }
     @Test
     void updateDevice(){
