@@ -48,7 +48,6 @@
         <module>spring-base</module>
         <!--spring-cloud最佳实践-->
         <module>spring-cloud-base</module>
-        <module>interviews</module>
     </modules>
 
     <properties>
