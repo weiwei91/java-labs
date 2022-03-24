@@ -8,9 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import java.util.Map;
-import java.util.Random;
-
 @MapperScan("com.wei.mybatisplus.mapper")
 @EnableTransactionManagement
 @Configuration//配置类
