@@ -14,6 +14,7 @@
     <modules>
         <module>common</module>
         <module>concurrency-practice</module>
+        <module>interviews</module>
     </modules>
 
 </project>
