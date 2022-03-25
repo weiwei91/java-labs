@@ -33,6 +33,25 @@ class MybatisPlusApplicationTests {
     @Resource
     PlaceMapper placeMapper;
 
+    @Test
+    void batchSave(){
+        List<Device> list =new ArrayList<>();
+        for (int i = 0; i < 100; i++) {
+            Device device = Device.builder()
+                    .deviceName("超脑设备"+i+"号")
+                    .ip("10.16.20.23")
+                    .port("5202")
+                    .capability("pir")
+                    .regionCode("hangzhou")
+                    .placeCode("200")
+                    .version(1)
+                    .build();
+            list.add(device);
+
+        }
+        deviceMapper.insertBatchSomeColumn(list);
+    }
+
 
     @Test
     void contextLoads() {
