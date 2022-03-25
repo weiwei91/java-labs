@@ -37,7 +37,7 @@
         <dependency>
             <groupId>com.baomidou</groupId>
             <artifactId>mybatis-plus-boot-starter</artifactId>
-            <version>3.5.1</version>
+            <version>${mybatis-plus.version}</version>
             <exclusions>
                 <!-- 排除默认的 HikariCP 数据源 -->
                 <exclusion>
@@ -45,6 +45,11 @@
                     <artifactId>HikariCP</artifactId>
                 </exclusion>
             </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.baomidou</groupId>
+            <artifactId>mybatis-plus-extension</artifactId>
+            <version>${mybatis-plus.version}</version>
         </dependency>
 
         <dependency>
