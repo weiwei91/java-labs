@@ -47,8 +47,6 @@ public class MybatisPlusConfig {
         });
         mybatisPlusInterceptor.addInnerInterceptor(dynamicTableNameInnerInterceptor);
 
-
-
         return mybatisPlusInterceptor;
     }
 
