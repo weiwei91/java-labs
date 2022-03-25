@@ -1,15 +1,10 @@
 spring:
-  application:
-    name: mybatisplus-provider # Spring 应用名
-  cloud:
-    nacos:
-      discovery:
-        server-addr: localhost:8848 # Nacos 服务器地址
   datasource:
-    url: jdbc:mysql://localhost:3306/records?useSSL=false&useUnicode=true&characterEncoding=UTF-8
+    url: jdbc:mysql://10.19.134.69:3306/records?useSSL=false&useUnicode=true&characterEncoding=UTF-8
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password: Abc123++
+    password: Abc12345++
+    platform: mysql                               # 数据库类型
     type: com.alibaba.druid.pool.DruidDataSource  # 指定数据源类型
     ########## 连接池 配置 ##########
     druid:
@@ -73,8 +68,8 @@ spring:
         enabled: true                   # 启用StatViewServlet
         url-pattern: /druid/*           # 访问内置监控页面的路径，内置监控页面的首页是/druid/index.html
         reset-enable: false              # 不允许清空统计数据,重新计算
-        login-username: weiwei            # 配置监控页面访问密码
-        login-password: weiwei91
+        login-username: root            # 配置监控页面访问密码
+        login-password: 123
         allow: 127.0.0.1           # 允许访问的地址，如果allow没有配置或者为空，则允许所有访问
         deny:                                        # 拒绝访问的地址，deny优先于allow，如果在deny列表中，就算在allow列表中，也会被拒绝
 
@@ -98,6 +93,3 @@ logging:
           mapper: debug
 server:
   port: 89
-
-
-
