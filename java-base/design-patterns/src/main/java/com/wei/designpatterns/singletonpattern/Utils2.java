@@ -10,6 +10,10 @@ public class Utils2 {
      **/
     private Utils2(){}
 
+    /**
+     * 静态内部类中包含一个静态属性 static final 修饰
+     * 用到的时候才加载
+     * **/
     private static class Utils2Instance{
         private static final Utils2 utils2 = new Utils2();
     }
