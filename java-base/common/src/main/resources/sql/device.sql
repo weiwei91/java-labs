@@ -1,4 +1,4 @@
-drop table device;
+drop table if exists device;
 CREATE TABLE `device` (
                           `index_code` varchar(32) COLLATE utf8mb4_bin NOT NULL COMMENT '设备编码',
                           `ip` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '设备ip',

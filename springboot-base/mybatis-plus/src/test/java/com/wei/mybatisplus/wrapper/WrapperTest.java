@@ -37,7 +37,7 @@ public class WrapperTest {
 
         List<Device> deviceList = deviceMapper.selectList(queryWrapper);
 
-        log.info("1");
+
 
     }
 
@@ -50,7 +50,7 @@ public class WrapperTest {
         Page page =new Page<>(2,10);
         Page<Device> deviceList = deviceMapper.selectPage(page,queryWrapper);
 
-        log.info("1");
+
 
     }
 

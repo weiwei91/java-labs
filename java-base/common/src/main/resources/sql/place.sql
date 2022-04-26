@@ -1,3 +1,4 @@
+drop table if exists place;
 CREATE TABLE `place` (
                           `index_code` varchar(32) COLLATE utf8mb4_bin NOT NULL COMMENT '设备编码',
                           `place_name` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '设备名称',

@@ -8,7 +8,6 @@ import com.wei.mybatisplus.mapper.PlaceMapper;
 import com.wei.mybatisplus.mapper.RegionMapper;
 import com.wei.mybatisplus.service.DeviceService;
 import com.wei.mybatisplus.task.BatchSaveTask;
-import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -22,7 +21,6 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
 @SpringBootTest
-@Slf4j
 class MybatisPlusApplicationTests {
     @Resource
     DeviceMapper deviceMapper;
@@ -46,17 +44,17 @@ class MybatisPlusApplicationTests {
                     .placeCode("200")
                     .version(1)
                     .build();
-            list.add(device);
 
+            deviceMapper.insert(device);
         }
-        deviceMapper.insertBatchSomeColumn(list);
+
     }
 
 
     @Test
     void contextLoads() {
         List<Device> list = deviceMapper.selectList(null);
-        log.info("1");
+
     }
 
     @Test
@@ -103,7 +101,7 @@ class MybatisPlusApplicationTests {
         device2.setDeviceName("更新14");
         int a = deviceMapper.updateById(device2);
         int b = deviceMapper.updateById(device1);
-        log.info("123");
+
 
     }
 
@@ -121,7 +119,7 @@ class MybatisPlusApplicationTests {
             deviceMapper.insert(device);
         }
         Long endTime = System.currentTimeMillis();
-        log.info("30000000条数据,逐个插入共耗时:{}秒",(endTime-startTime)/1000);
+
     }
 
     @Test
@@ -131,7 +129,7 @@ class MybatisPlusApplicationTests {
         List<Device> list = getDevices(50000);
         deviceService.saveBatch(list);
         Long endTime = System.currentTimeMillis();
-        log.info("5万条数据,批量插入共耗时:{}秒",(endTime-startTime)/1000);
+
         //45秒
     }
 
@@ -148,7 +146,7 @@ class MybatisPlusApplicationTests {
         }
         countDownLatch.await();
         Long endTime = System.currentTimeMillis();
-        log.info("5千万条数据,批量插入共耗时:{}秒",(endTime-startTime)/1000);
+
         //10秒
     }
 

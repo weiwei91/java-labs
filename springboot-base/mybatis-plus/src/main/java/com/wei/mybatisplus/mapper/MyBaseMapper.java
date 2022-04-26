@@ -14,6 +14,5 @@ public interface MyBaseMapper<T> extends BaseMapper<T> {
      * @param entityList 实体列表
      * @return 影响行数
      */
-    Integer insertBatchSomeColumn(Collection<T> entityList);
 }
 

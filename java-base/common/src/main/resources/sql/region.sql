@@ -1,4 +1,4 @@
-drop table region;
+drop table if exists region;
 CREATE TABLE `region` (
                           `index_code` varchar(32) COLLATE utf8mb4_bin NOT NULL COMMENT '设备编码',
                           `region_name` varchar(32) COLLATE utf8mb4_bin DEFAULT NULL COMMENT '区域名称',
