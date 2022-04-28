@@ -1,4 +1,6 @@
---records数据库相关脚本
+# CREATE DATABASE records;
+USE records;
+#records数据库相关脚本
 drop table if exists device;
 CREATE TABLE `device` (
                           `index_code` varchar(32) COLLATE utf8mb4_bin NOT NULL COMMENT '设备编码',

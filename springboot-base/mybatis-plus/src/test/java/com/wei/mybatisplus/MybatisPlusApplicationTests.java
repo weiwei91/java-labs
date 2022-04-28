@@ -44,7 +44,6 @@ class MybatisPlusApplicationTests {
                     .placeCode("200")
                     .version(1)
                     .build();
-
             deviceMapper.insert(device);
         }
 
