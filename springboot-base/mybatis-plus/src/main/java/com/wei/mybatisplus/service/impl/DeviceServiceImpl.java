@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
+import java.util.Collection;
 
 @Service
 public class DeviceServiceImpl extends ServiceImpl<DeviceMapper, Device> implements DeviceService {
@@ -18,4 +19,6 @@ public class DeviceServiceImpl extends ServiceImpl<DeviceMapper, Device> impleme
     public Device getDeviceForUnitTest(String id) {
         return deviceMapper.selectById(id);
     }
+
+
 }
