@@ -15,6 +15,7 @@
         <module>common</module>
         <module>concurrency-practice</module>
         <module>interviews</module>
+        <module>design-patterns</module>
     </modules>
 
 </project>

@@ -32,13 +32,9 @@ public class WrapperTest {
     @Test
     public void testGet() {
         QueryWrapper<Device> queryWrapper =new QueryWrapper<>();
-
         queryWrapper.select("*").like("device_name","超脑");
-
         List<Device> deviceList = deviceMapper.selectList(queryWrapper);
-
         log.info("1");
-
     }
 
     @Test
