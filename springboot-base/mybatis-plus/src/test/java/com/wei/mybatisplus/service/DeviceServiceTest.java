@@ -1,6 +1,7 @@
 package com.wei.mybatisplus.service;
 
 import com.wei.common.model.entity.Device;
+import com.wei.mybatisplus.MybatisPlusApplicationTests;
 import com.wei.mybatisplus.mapper.DeviceMapper;
 import org.junit.Assert;
 import org.junit.Test;
@@ -11,9 +12,8 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.mock.mockito.MockBean;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class DeviceServiceTest {
+
+public class DeviceServiceTest extends MybatisPlusApplicationTests {
 
     @MockBean
     private DeviceMapper deviceMapper;

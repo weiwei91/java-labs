@@ -1,6 +1,7 @@
 package com.wei.mybatisplus.controller;
 
 import com.wei.common.model.entity.Device;
+import com.wei.mybatisplus.MybatisPlusApplicationTests;
 import com.wei.mybatisplus.service.DeviceService;
 import org.hamcrest.core.IsEqual;
 import org.junit.Test;
@@ -16,10 +17,9 @@ import org.springframework.test.web.servlet.ResultActions;
 import org.springframework.test.web.servlet.request.MockMvcRequestBuilders;
 import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+
 @AutoConfigureMockMvc
-public class DeviceControllerTest {
+public class DeviceControllerTest extends MybatisPlusApplicationTests {
     @Autowired
     private MockMvc mvc;
     @MockBean
