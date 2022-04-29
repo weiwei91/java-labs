@@ -25,7 +25,7 @@ https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4
 | springboot         | 2.2.4.RELEASE |
 | springcloud        | Hoxton.SR1 |
 | springcloudalibaba | 2.2.0.RELEASE |
-| nacos              | 1.4.1 |
+| nacos              | 1.1.4 |
 
 
 
