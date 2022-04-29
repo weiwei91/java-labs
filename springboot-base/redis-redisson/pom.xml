@@ -26,7 +26,7 @@
         <dependency>
             <groupId>org.redisson</groupId>
             <artifactId>redisson-spring-boot-starter</artifactId>
-            <version>3.11.3</version>
+            <version>${redisson.version}</version>
         </dependency>
 
         <!-- 方便等会写单元测试 -->
@@ -45,18 +45,10 @@
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>2.6</version>
+            <version>${commons-io.version}</version>
         </dependency>
     </dependencies>
 
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.springframework.boot</groupId>
-                <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>2.6.7</version>
-            </plugin>
-        </plugins>
-    </build>
+
 
 </project>

@@ -18,6 +18,15 @@ master分支
 # 注意版本对应关系
 https://github.com/alibaba/spring-cloud-alibaba/wiki/%E7%89%88%E6%9C%AC%E8%AF%B4%E6%98%8E
 
+# 本项目中间件版本说明
+| 软件                 | 版本号 |
+|--------------------|---|
+| mysql              | 5.6.51 |
+| springboot         | 2.2.4.RELEASE |
+| springcloud        | Hoxton.SR1 |
+| springcloudalibaba | 2.2.0.RELEASE |
+| nacos              | 单元格 |
+
 
 
 

@@ -59,6 +59,19 @@
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
         <mybatis-plus.version>3.5.1</mybatis-plus.version>
+        <lombok.version>1.18.22</lombok.version>
+        <retrofit.version>2.2.21</retrofit.version>
+        <maven-compiler-plugin.versioin>3.8.1</maven-compiler-plugin.versioin>
+        <feign-core.version>11.0</feign-core.version>
+        <feign-gson.version>11.0</feign-gson.version>
+        <feign-spring4.version>11.0</feign-spring4.version>
+        <okhttp.version></okhttp.version>
+        <okhttp.version>3.14.9</okhttp.version>
+        <commons-lang3.version>3.10</commons-lang3.version>
+        <mysql-connector-java.version>5.1.45</mysql-connector-java.version>
+        <druid.version>1.2.8</druid.version>
+        <redisson.version>3.11.3</redisson.version>
+        <commons-io.version>2.6</commons-io.version>
     </properties>
 
 </project>

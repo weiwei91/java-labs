@@ -64,6 +64,7 @@ public class DeviceController {
             Device device = deviceResponse.getData();
             Future<Place> placeFuture = executorService.submit(new queryPlaceTask(deviceServiceClient,device.getPlaceCode()));
             Future<Region> regionFuture = executorService.submit(new queryRegionTask(deviceServiceClient,device.getRegionCode()));
+            //Future get会阻塞主线程
             Place place = placeFuture.get();
             Region region = regionFuture.get();
             if (place != null && region != null){
