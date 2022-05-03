@@ -18,6 +18,7 @@
         <module>feign</module>
         <module>redis-redisson</module>
         <module>weitools-spring-boot-starter</module>
+        <module>typical-accident</module>
     </modules>
 
 </project>
