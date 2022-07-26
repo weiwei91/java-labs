@@ -13,6 +13,21 @@ public class Solve3 {
     }
 
     public String replaceSpaces(String s, int length) {
+        char [] sc =s.toCharArray();
+        StringBuilder result = new StringBuilder();
+        int flag = sc.length < length ? sc.length : length;
+        for (int i = 0; i < flag; i++) {
+            if (sc[i] == ' '){
+                result.append("%20");
+            }else {
+                result.append(sc[i]);
+            }
+        }
+        return result.toString();
+    }
+
+
+    public String replaceSpaces1(String s, int length) {
         String s1 = myTrim(s,length);
         char [] s1c = s1.toCharArray();
         if (s1c.length==0){
@@ -61,9 +76,15 @@ public class Solve3 {
     }
 
     /**
-     > 2022/07/26 20:17:44
-     解答成功:
-     执行耗时:22 ms,击败了19.32% 的Java用户
-     内存消耗:49.5 MB,击败了8.81% 的Java用户
+     * > 2022/07/26 20:17:44
+     * 解答成功:
+     * 执行耗时:22 ms,击败了19.32% 的Java用户
+     * 内存消耗:49.5 MB,击败了8.81% 的Java用户
+     *
+     *
+     * > 2022/07/26 20:33:51
+     * 解答成功:
+     * 	执行耗时:15 ms,击败了42.57% 的Java用户
+     * 	内存消耗:48.9 MB,击败了63.80% 的Java用户
      * */
 }
