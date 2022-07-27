@@ -6,13 +6,30 @@ public class Solve3 {
 
     public static void main(String[] args) {
         String s1 = "          ";
-        String s2 = "wei wei  ";
+        String s2 = "wei wei     ";
         Solve3 solve1 = new Solve3();
-        String result = solve1.replaceSpaces(s1,5);
+        String result = solve1.replaceSpaces(s2,7);
         System.out.println(result);
     }
 
-    public String replaceSpaces(String s, int length) {
+    public String replaceSpaces(String S, int length) {
+        int index = S.length() - 1;
+        char[] ch = S.toCharArray();
+        for (int i = length - 1; i >= 0; i--) {
+            if (ch[i] == ' ') {
+                ch[index] = '0';
+                ch[index - 1] = '2';
+                ch[index - 2] = '%';
+                index -= 3;
+            } else {
+                ch[index] = ch[i];
+                index--;
+            }
+        }
+        return new String(ch, index + 1, ch.length - index - 1);
+        // 1.字符数组 2.迁移量，从0到第一个字符下标 3.个数，即新字符串长度 }
+    }
+    public String replaceSpaces2(String s, int length) {
         char [] sc =s.toCharArray();
         StringBuilder result = new StringBuilder();
         int flag = sc.length < length ? sc.length : length;
@@ -86,5 +103,13 @@ public class Solve3 {
      * 解答成功:
      * 	执行耗时:15 ms,击败了42.57% 的Java用户
      * 	内存消耗:48.9 MB,击败了63.80% 的Java用户
+     *
+     * 	> 2022/07/27 10:31:50
+     * 解答成功:
+     * 	执行耗时:7 ms,击败了99.37% 的Java用户
+     * 	内存消耗:49 MB,击败了51.32% 的Java用户
+     *
+     * 	优秀的算法确实能成倍的提高运行效率
+     *
      * */
 }
