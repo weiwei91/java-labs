@@ -2,7 +2,7 @@ package com.wei.feign.client;
 
 import com.wei.common.base.response.Response;
 import com.wei.common.model.entity.Device;
-import com.wei.common.model.request.DeviceAddRequest;
+import com.wei.common.model.request.DeviceRequest;
 import feign.Headers;
 import feign.Param;
 import feign.RequestLine;
@@ -13,5 +13,5 @@ public interface DeviceServiceClient01 {
 
     @RequestLine("POST /device/postAdd")
     @Headers("Content-Type: application/json")
-    DeviceAddRequest postAdd(DeviceAddRequest request);
+    DeviceRequest postAdd(DeviceRequest.Add request);
 }

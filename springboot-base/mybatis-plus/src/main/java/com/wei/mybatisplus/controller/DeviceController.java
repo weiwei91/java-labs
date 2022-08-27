@@ -2,8 +2,8 @@ package com.wei.mybatisplus.controller;
 
 import com.wei.common.base.response.Response;
 import com.wei.common.model.entity.Device;
-import com.wei.common.model.request.DeviceAddRequest;
-import com.wei.mybatisplus.service.DeviceService;
+import com.wei.common.model.request.DeviceRequest;
+import com.wei.common.service.DeviceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,7 +20,7 @@ public class DeviceController {
         return Response.success(device);
     }
     @PostMapping("/postAdd")
-    public DeviceAddRequest getString(@RequestBody DeviceAddRequest deviceAddRequest) {
+    public DeviceRequest getString(@RequestBody DeviceRequest deviceAddRequest) {
         return deviceAddRequest;
     }
 
