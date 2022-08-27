@@ -2,8 +2,6 @@ package com.wei.mybatisplus.controller;
 
 import com.wei.common.base.response.Response;
 import com.wei.mybatisplus.mapper.PlaceMapper;
-import com.wei.mybatisplus.service.DeviceService;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
 import javax.annotation.Resource;

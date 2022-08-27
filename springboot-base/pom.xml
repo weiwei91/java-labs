@@ -19,6 +19,7 @@
         <module>redis-redisson</module>
         <module>weitools-spring-boot-starter</module>
         <module>typical-accident</module>
+        <module>special-character</module>
     </modules>
 
 </project>

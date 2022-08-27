@@ -1,4 +1,4 @@
-package com.wei.mybatisplus.mapper;
+package com.wei.common.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import com.wei.common.model.entity.Place;
