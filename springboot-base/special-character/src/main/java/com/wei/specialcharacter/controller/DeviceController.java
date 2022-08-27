@@ -32,9 +32,9 @@ public class DeviceController {
          * _ -> \_
          * % -> \%
          **/
-        deviceAddRequest.setDeviceName( deviceAddRequest.getDeviceName().
-                replace("_","\\_").
-                replace("%","\\%") );
+//        deviceAddRequest.setDeviceName( deviceAddRequest.getDeviceName().
+//                replace("_","\\_").
+//                replace("%","\\%") );
 
         queryWrapper.like("device_name",deviceAddRequest.getDeviceName());
         List<Device> list  = deviceService.list(queryWrapper);
