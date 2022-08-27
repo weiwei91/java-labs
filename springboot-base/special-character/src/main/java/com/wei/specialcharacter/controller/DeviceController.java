@@ -27,6 +27,15 @@ public class DeviceController {
     @PostMapping("/list")
     public Response list(@RequestBody DeviceRequest.getList deviceAddRequest) {
         QueryWrapper<Device> queryWrapper = new QueryWrapper<>();
+        /**
+         * 特殊字符需要转义处理
+         * _ -> \_
+         * % -> \%
+         **/
+        deviceAddRequest.setDeviceName( deviceAddRequest.getDeviceName().
+                replace("_","\\_").
+                replace("%","\\%") );
+
         queryWrapper.like("device_name",deviceAddRequest.getDeviceName());
         List<Device> list  = deviceService.list(queryWrapper);
         return Response.success(list);
