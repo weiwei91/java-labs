@@ -90,7 +90,7 @@ logging:
   level:
     com:
       wei:
-        mybatisplus:
+        common:
           mapper: debug
 server:
   port: 90
