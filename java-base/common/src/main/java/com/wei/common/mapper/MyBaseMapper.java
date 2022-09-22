@@ -1,8 +1,6 @@
-package com.wei.mybatisplus.mapper;
+package com.wei.common.mapper;
 
 import com.baomidou.mybatisplus.core.mapper.BaseMapper;
-
-import java.util.Collection;
 
 /**
  * 扩展通用 Mapper，支持数据批量插入,单只支持mysql

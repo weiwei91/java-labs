@@ -2,7 +2,7 @@ package com.wei.feign;
 
 import com.wei.common.base.response.Response;
 import com.wei.common.model.entity.Device;
-import com.wei.common.model.request.DeviceAddRequest;
+import com.wei.common.model.request.DeviceRequest;
 import com.wei.feign.client.DeviceServiceClient01;
 import com.wei.feign.client.DeviceServiceClient02;
 import lombok.extern.slf4j.Slf4j;
@@ -28,10 +28,10 @@ class FeignApplicationTests {
 
     @Test
     void testPost() {
-        DeviceAddRequest deviceAddRequest1 = new DeviceAddRequest("1","123");
-        DeviceAddRequest deviceAddRequest2 = new DeviceAddRequest("A","ASD");
-        DeviceAddRequest deviceAddRequest3 = deviceServiceClient01.postAdd(deviceAddRequest1);
-        DeviceAddRequest deviceAddRequest4 = deviceServiceClient01.postAdd(deviceAddRequest2);
+        DeviceRequest.Add deviceAddRequest1 = new DeviceRequest.Add("1","123");
+        DeviceRequest.Add  deviceAddRequest2 = new DeviceRequest.Add ("A","ASD");
+        DeviceRequest deviceAddRequest3 = deviceServiceClient01.postAdd(deviceAddRequest1);
+        DeviceRequest deviceAddRequest4 = deviceServiceClient01.postAdd(deviceAddRequest2);
         log.info("1");
     }
 
