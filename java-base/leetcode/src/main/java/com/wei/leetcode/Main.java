@@ -1,7 +1,15 @@
 package com.wei.leetcode;
 
+import java.text.DecimalFormat;
+import java.util.Optional;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println(1);
+       String userName = "ww";
+        userName = userName.split("&&")[0];
+
+
+
+        System.out.println(userName);
     }
 }
