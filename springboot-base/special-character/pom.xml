@@ -44,6 +44,20 @@
             <version>${druid.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>com.wei</groupId>
+            <artifactId>weitools-spring-boot-starter</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+            <scope>compile</scope>
+        </dependency>
+
+
+        <!--引入redis依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+        </dependency>
+
 
     </dependencies>
 

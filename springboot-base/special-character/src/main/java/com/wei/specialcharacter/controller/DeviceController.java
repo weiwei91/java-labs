@@ -5,6 +5,7 @@ import com.wei.common.base.response.Response;
 import com.wei.common.model.entity.Device;
 import com.wei.common.model.request.DeviceRequest;
 import com.wei.common.service.DeviceService;
+import com.wei.weitoolsspringbootstarter.annotation.PreventDuplication;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -18,6 +19,7 @@ public class DeviceController {
     DeviceService deviceService;
 
     @GetMapping("/getDeviceById")
+    @PreventDuplication(expireSeconds = 800)
     public Response getDeviceById(@RequestParam("id") String id) throws InterruptedException {
         Device device = deviceService.getById(id);
         return Response.success(device);

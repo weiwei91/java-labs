@@ -28,8 +28,8 @@ import javax.servlet.http.HttpServletRequest;
  ***/
 
 
-@Aspect
-@Component
+//@Aspect
+//@Component
 public class ParamsAspect {
 
 
