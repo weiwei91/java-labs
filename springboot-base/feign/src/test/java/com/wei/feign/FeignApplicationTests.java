@@ -21,8 +21,8 @@ class FeignApplicationTests {
 
     @Test
     void testGet() {
-        Response<Device> devcie1 = deviceServiceClient01.getDeviceById("242f8e85b6c1142b81f96784ee0b6b1f");
-        Response<Device> devcie2 = deviceServiceClient02.getDeviceById("242f8e85b6c1142b81f96784ee0b6b1f");
+        Response<Device> devcie1 = deviceServiceClient01.getDeviceById("b507b32f6c4f3d04dd6dc3cc8567f7f3");
+        Response<Device> devcie2 = deviceServiceClient02.getDeviceById("b507b32f6c4f3d04dd6dc3cc8567f7f3");
         log.info("1");
     }
 
