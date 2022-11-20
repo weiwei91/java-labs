@@ -30,4 +30,5 @@ public class DeviceServiceTest extends MybatisPlusApplicationTests {
         Assert.assertEquals("设备名不匹配", "weiwei", device.getDeviceName());
         Assert.assertEquals("ip不匹配", "10.12.13.10", device.getIp());
     }
+
 }

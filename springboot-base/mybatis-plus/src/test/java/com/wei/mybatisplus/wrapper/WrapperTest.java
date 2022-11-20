@@ -2,10 +2,10 @@ package com.wei.mybatisplus.wrapper;
 
 import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.baomidou.mybatisplus.extension.plugins.pagination.Page;
+import com.wei.common.mapper.DeviceMapper;
 import com.wei.common.model.entity.Device;
+import com.wei.common.service.DeviceService;
 import com.wei.mybatisplus.MybatisPlusApplicationTests;
-import com.wei.mybatisplus.mapper.DeviceMapper;
-import com.wei.mybatisplus.service.DeviceService;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
