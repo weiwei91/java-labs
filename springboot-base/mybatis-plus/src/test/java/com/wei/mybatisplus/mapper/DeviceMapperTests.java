@@ -1,10 +1,13 @@
 package com.wei.mybatisplus.mapper;
 
+import com.wei.common.mapper.DeviceMapper;
+import com.wei.common.mapper.PlaceMapper;
+import com.wei.common.mapper.RegionMapper;
 import com.wei.common.model.entity.Device;
 import com.wei.common.model.entity.Place;
 import com.wei.common.model.entity.Region;
+import com.wei.common.service.DeviceService;
 import com.wei.mybatisplus.MybatisPlusApplicationTests;
-import com.wei.mybatisplus.service.DeviceService;
 import com.wei.mybatisplus.task.BatchSaveTask;
 import lombok.extern.slf4j.Slf4j;
 import org.junit.jupiter.api.Test;

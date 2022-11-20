@@ -1,9 +1,9 @@
 package com.wei.mybatisplus.controller;
 
 import com.wei.common.base.response.Response;
-import com.wei.mybatisplus.mapper.PlaceMapper;
-import org.springframework.web.bind.annotation.*;
 
+import com.wei.common.mapper.PlaceMapper;
+import org.springframework.web.bind.annotation.*;
 import javax.annotation.Resource;
 
 

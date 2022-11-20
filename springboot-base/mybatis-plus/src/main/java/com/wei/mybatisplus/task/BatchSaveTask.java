@@ -1,7 +1,8 @@
 package com.wei.mybatisplus.task;
 
 import com.wei.common.model.entity.Device;
-import com.wei.mybatisplus.service.DeviceService;
+import com.wei.common.service.DeviceService;
+
 
 import java.util.List;
 import java.util.concurrent.CountDownLatch;

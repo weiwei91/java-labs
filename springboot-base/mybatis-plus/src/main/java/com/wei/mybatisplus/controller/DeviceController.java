@@ -12,7 +12,7 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/device")
 public class DeviceController {
     @Autowired
-    DeviceService deviceService;
+    private DeviceService deviceService;
 
     @GetMapping("/getDeviceById")
     public Response getDeviceById(@RequestParam("id") String id) throws InterruptedException {

@@ -1,7 +1,7 @@
 package com.wei.mybatisplus.controller;
 
 import com.wei.common.base.response.Response;
-import com.wei.mybatisplus.mapper.RegionMapper;
+import com.wei.common.mapper.RegionMapper;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
