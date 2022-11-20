@@ -1,8 +1,9 @@
 package com.wei.mybatisplus.service;
 
+import com.wei.common.mapper.DeviceMapper;
 import com.wei.common.model.entity.Device;
+import com.wei.common.service.DeviceService;
 import com.wei.mybatisplus.MybatisPlusApplicationTests;
-import com.wei.mybatisplus.mapper.DeviceMapper;
 import org.junit.Assert;
 import org.junit.Test;
 import org.mockito.Mockito;

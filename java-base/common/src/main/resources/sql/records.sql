@@ -1,4 +1,4 @@
-# CREATE DATABASE records;
+CREATE DATABASE records;
 USE records;
 #records数据库相关脚本
 drop table if exists device;
