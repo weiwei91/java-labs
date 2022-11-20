@@ -7,6 +7,9 @@ import com.wei.common.service.DeviceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+/**
+ * @author weiwei10
+ */
 
 @RestController
 @RequestMapping("/device")
@@ -15,7 +18,7 @@ public class DeviceController {
     private DeviceService deviceService;
 
     @GetMapping("/getDeviceById")
-    public Response getDeviceById(@RequestParam("id") String id) throws InterruptedException {
+    public Response getDeviceById(@RequestParam("id") String id){
         Device device = deviceService.getById(id);
         return Response.success(device);
     }
