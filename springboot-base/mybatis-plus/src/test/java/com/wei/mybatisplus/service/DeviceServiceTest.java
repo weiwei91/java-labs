@@ -1,5 +1,6 @@
 package com.wei.mybatisplus.service;
 
+import com.hikvision.pbg.nree.iwater.utils.DateUtil;
 import com.wei.common.mapper.DeviceMapper;
 import com.wei.common.model.entity.Device;
 import com.wei.common.service.DeviceService;
@@ -19,6 +20,15 @@ public class DeviceServiceTest extends MybatisPlusApplicationTests {
     @Autowired
     private DeviceService deviceService;
 
+    @Autowired
+    private DateUtil dateUtil;
+
+
+    @Test
+    public void testUtil(){
+        System.out.println(dateUtil.speak());
+    }
+
     @Test
     public void testGet() {
         Mockito.when(deviceMapper.selectById("wei")).thenReturn(
@@ -30,5 +40,7 @@ public class DeviceServiceTest extends MybatisPlusApplicationTests {
         Assert.assertEquals("设备名不匹配", "weiwei", device.getDeviceName());
         Assert.assertEquals("ip不匹配", "10.12.13.10", device.getIp());
     }
+
+
 
 }
